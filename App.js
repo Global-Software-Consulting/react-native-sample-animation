@@ -8,7 +8,6 @@
 
 import React, {useState} from 'react';
 import Modal from 'react-native-modal';
-import LottieView from 'lottie-react-native';
 import {View, Text, Image, Button} from 'react-native';
 import SquareFadeIn from './src/components/SquareFadeIn/index';
 import SquareRotate from './src/components/SquareRotate/index';
