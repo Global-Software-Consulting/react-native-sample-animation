@@ -33,7 +33,7 @@ shadowRadius: 14.78,
 
 elevation: 22, }}>
 <View >
-      <Image src={require('./src/Assets/logo.gif')} style={{width:100, height:100}} />
+      <Image source={require('./src/Assets/logo.gif')} loop style={{width:200, height:200}} />
     </View>
       <Text style={{ fontSize: 20 }}>React Native Animation</Text>
       <View style={{margin: 5, width:'60%', borderRadius:20}}>
