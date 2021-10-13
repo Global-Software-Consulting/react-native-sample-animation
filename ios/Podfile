@@ -16,7 +16,7 @@ target 'ReactNativeAnimations' do
     inherit! :complete
     # Pods for testing
   end
-
+  pod 'Google-Mobile-Ads-SDK'
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
