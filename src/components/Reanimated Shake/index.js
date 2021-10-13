@@ -12,7 +12,6 @@ import Animated, {
 const ReanimatedShake = () => {
   // just like we use useState
   const horizontal = useSharedValue(1);
-  const vertical = useSharedValue(1);
 
   //styling using re-animated
   const style = useAnimatedStyle(() => {

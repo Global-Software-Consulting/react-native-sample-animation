@@ -8,7 +8,8 @@
 
 import React, {useState} from 'react';
 import Modal from 'react-native-modal';
-import {View, Text, Image, Button, TouchableOpacity} from 'react-native';
+import { View, Text, Image, Button, TouchableOpacity } from 'react-native';
+//importing components
 import SquareFadeIn from './src/components/SquareFadeIn/index';
 import SquareRotate from './src/components/SquareRotate/index';
 import SquareScale from './src/components/SquareScale/index';
@@ -22,7 +23,7 @@ import ReanimatedWobble from './src/components/ReanimatedWobble/index';
 import ReanimatedShake from './src/components/Reanimated Shake/index';
 import SVGAnimation from './src/components/SVGAnimation/index';
 import CircularButtons from './src/components/CircularButtons';
-
+//----------------------
 const App = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [animationType, setAnimationType] = useState(0);
@@ -249,7 +250,7 @@ const App = () => {
         )}
       </View>
 
-      <Modal isVisible={isModalVisible} animationType="slide">
+      <Modal isVisible={isModalVisible} animationType='slide'>
         <View
           style={{
             backgroundColor: 'white',
