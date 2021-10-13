@@ -20,6 +20,8 @@ import ReanimatedFading from './src/components/ReanimatedFading/index';
 import ReanimatedSequence from './src/components/ReanimatedSequence/index';
 import ReanimatedWobble from './src/components/ReanimatedWobble/index';
 import ReanimatedShake from './src/components/Reanimated Shake/index';
+import SVGAnimation from './src/components/SVGAnimation/index';
+import CircularButtons from './src/components/CircularButtons';
 
 const App = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -27,15 +29,15 @@ const App = () => {
   const [page, setPage] = useState(0);
   const PageZero = () => {
     return (
-      <View>
-        <View>
+      <View style={{alignItems:'center'}}>
+        <View style={{alignItems:'center'}}>
           <Image
             source={require('./src/Assets/logo.gif')}
             loop
             style={{width: 200, height: 200}}
           />
         </View>
-        <Text style={{fontSize: 20}}>React Native Animation</Text>
+        <Text style={{fontSize: 20, color:'black'}}>React Native Animation</Text>
 
         <View style={{margin: 5, width: '60%', borderRadius: 20}}>
           <Button
@@ -110,7 +112,7 @@ const App = () => {
             style={{width: 200, height: 200}}
           />
         </View>
-        <Text style={{fontSize: 20}}>Reanimated 2</Text>
+        <Text style={{fontSize: 20, color:'black'}}>Reanimated 2</Text>
         <View style={{margin: 5, width: '60%'}}>
           <Button
             title="Reanimated 2 Scaling"
@@ -160,24 +162,35 @@ const App = () => {
     );
   };
 
-
   const PageThree = () => {
     return (
-      <>
-        <View>
-          <Image
-            source={require('./src/Assets/logo.gif')}
-            loop
-            style={{width: 200, height: 200}}
-          />
-        </View>
-        <Text style={{fontSize: 20}}>SVG animation</Text>
-        
-
-      </>
+      <View style={{alignItems: 'center'}}>
+        <Image
+          source={require('./src/Assets/logo.gif')}
+          loop
+          style={{width: 200, height: 200}}
+        />
+        <Text style={{fontSize: 20, color:'black'}}>SVG animation</Text>
+        <SVGAnimation />
+      </View>
     );
   };
 
+  const PageFour = () => {
+    return (
+      <View style={{alignItems: 'center'}}>
+        <Image
+          source={require('./src/Assets/logo.gif')}
+          loop
+          style={{width: 200, height: 200}}
+        />
+        <Text style={{fontSize: 20, top: 0, color:'black'}}>Circular buttons</Text>
+        <View style={{marginVertical:200}}> 
+          <CircularButtons />
+        </View>
+      </View>
+    );
+  };
 
   return (
     <View
@@ -207,21 +220,33 @@ const App = () => {
 
           elevation: 22,
         }}>
-        {page === 0 ? <PageZero /> : page===2 ? <PageThree /> : <PageOne />}
-        {page != 2 && <TouchableOpacity
-          onPress={() => {
-            page === 2 ? setPage(2) : setPage(page + 1);
-          }}
-          style={{ position: 'absolute', bottom: 10, right:5 }}>
-          <Text>Next Page</Text>
-        </TouchableOpacity>}
-        {page != 0 && <TouchableOpacity
-          onPress={() => {
-            page === 0 ? setPage(0) : setPage(page - 1);
-          }}
-          style={{ position: 'absolute', bottom: 10, left:5 }}>
-          <Text>Previous Page</Text>
-        </TouchableOpacity>}
+        {page === 0 ? (
+          <PageZero />
+        ) : page === 2 ? (
+          <PageThree />
+        ) : page === 3 ? (
+          <PageFour />
+        ) : (
+          <PageOne />
+        )}
+        {page != 3 && (
+          <TouchableOpacity
+            onPress={() => {
+              page === 3 ? setPage(3) : setPage(page + 1);
+            }}
+            style={{position: 'absolute', bottom: 10, right: 5}}>
+            <Text style={{color:'black'}}>Next Page</Text>
+          </TouchableOpacity>
+        )}
+        {page != 0 && (
+          <TouchableOpacity
+            onPress={() => {
+              page === 0 ? setPage(0) : setPage(page - 1);
+            }}
+            style={{position: 'absolute', bottom: 10, left: 5}}>
+            <Text style={{color:'black'}}>Previous Page</Text>
+          </TouchableOpacity>
+        )}
       </View>
 
       <Modal isVisible={isModalVisible} animationType="slide">
