@@ -9,20 +9,8 @@
 
 ## Key Feature
  * Basic animation using state.
- * Following animations from React-animated library
- ** Simple movement.
- ** Fade In
- ** Scaling
- ** Scaling along with ease out effect.
- ** Sequential animations.
- 
- * Following animations from React-reanimated 2.
- ** Scaling
- ** Fade out
- ** Sequential animations.
- ** Wobble effect.
- ** Shake effect.
-
+ * Animations from React-animated library i.e Simple movement, Fade In, Scaling, Scaling along with ease out effect, Sequential animations.
+ * Animations from React-reanimated 2 i.e Scaling, Fade out, Sequential animations, Wobble effect, Shake effect.
  * SVG path animation.
  * Circular floating button with ripple effect.
 
