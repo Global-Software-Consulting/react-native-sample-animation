@@ -56,5 +56,5 @@ run npm run android
 ```
 ## Libraries used
  [React Native Reanimated](https://github.com/software-mansion/react-native-reanimated) </br>
- [React Native SVG Animations](https://github.com/73R3WY/react-native-svg-animations)
- [React Native Circular Menu](https://github.com/geremih/react-native-circular-action-menu)
+ [React Native SVG Animations](https://github.com/73R3WY/react-native-svg-animations) </br>
+ [React Native Circular Menu](https://github.com/geremih/react-native-circular-action-menu) </br>
