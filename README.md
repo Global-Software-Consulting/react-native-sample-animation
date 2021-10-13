@@ -1,9 +1,8 @@
 # React-Native-Sample-Animation
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/88474289/137124870-03310ccd-aca0-43b7-a763-3baab3b5c62a.gif" width="350" title="hover text">
-    <img src="https://user-images.githubusercontent.com/88474289/137124888-de0c4eea-1b56-4b0d-b7e5-30cccd2751a4.gif" width="350" title="hover text">
   <img src="https://user-images.githubusercontent.com/88474289/137124902-ac852ecd-a061-4893-a20b-47f5355d3e42.gif" width="350" title="hover text">
-
+  <img src="https://user-images.githubusercontent.com/88474289/137124870-03310ccd-aca0-43b7-a763-3baab3b5c62a.gif" width="350" title="hover text">
+  <img src="https://user-images.githubusercontent.com/88474289/137124888-de0c4eea-1b56-4b0d-b7e5-30cccd2751a4.gif" width="350" title="hover text">
 </p>
 
 
