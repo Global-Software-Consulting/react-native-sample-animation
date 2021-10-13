@@ -15,6 +15,11 @@ import SquareScale from './src/components/SquareScale/index';
 import SquareScaleWithFriction from './src/components/SquareScaleWithFriction/index';
 import SquareAnimated from './src/components/SquareWithAnimated/index';
 import Square from './src/components/SquareWithUseEffect/index';
+import ReanimatedScaling from './src/components/ReanimatedScaling/index';
+import ReanimatedFading from './src/components/ReanimatedFading/index';
+import ReanimatedSequence from './src/components/ReanimatedSequence/index';
+import ReanimatedWobble from './src/components/ReanimatedWobble/index';
+import ReanimatedShake from './src/components/Reanimated Shake/index';
 
 const App = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -22,95 +27,138 @@ const App = () => {
   const [page, setPage] = useState(0);
   const PageZero = () => {
     return (
-    <View>
       <View>
-        <Image
-          source={require('./src/Assets/logo.gif')}
-          loop
-          style={{ width: 200, height: 200 }}
-        />
-      </View>
-      <Text style={{ fontSize: 20 }}>React Native Animation</Text>
+        <View>
+          <Image
+            source={require('./src/Assets/logo.gif')}
+            loop
+            style={{width: 200, height: 200}}
+          />
+        </View>
+        <Text style={{fontSize: 20}}>React Native Animation</Text>
 
-      <View style={{ margin: 5, width: '60%', borderRadius: 20 }}>
-        <Button
-          title="Fade in"
-          onPress={() => {
-            setAnimationType(0);
-            setIsModalVisible(true);
-          }}
-        />
-      </View>
+        <View style={{margin: 5, width: '60%', borderRadius: 20}}>
+          <Button
+            title="Fade in"
+            onPress={() => {
+              setAnimationType(0);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
 
-      <View style={{ margin: 5, width: '60%' }}>
-        <Button
-          title="Rotation"
-          onPress={() => {
-            setAnimationType(1);
-            setIsModalVisible(true);
-          }}
-        />
-      </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Rotation"
+            onPress={() => {
+              setAnimationType(1);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
 
-      <View style={{ margin: 5, width: '60%' }}>
-        <Button
-          title="Scaling"
-          onPress={() => {
-            setAnimationType(2);
-            setIsModalVisible(true);
-          }}
-        />
-      </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Scaling"
+            onPress={() => {
+              setAnimationType(2);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
 
-      <View style={{ margin: 5, width: '60%' }}>
-        <Button
-          title="Scaling with ease out"
-          onPress={() => {
-            setAnimationType(3);
-            setIsModalVisible(true);
-          }}
-        />
-      </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Scaling with ease out"
+            onPress={() => {
+              setAnimationType(3);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
 
-      <View style={{ margin: 5, width: '60%' }}>
-        <Button
-          title="Sequential Animation"
-          onPress={() => {
-            setAnimationType(4);
-            setIsModalVisible(true);
-          }}
-        />
-      </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Sequential Animation"
+            onPress={() => {
+              setAnimationType(4);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
 
-      <View style={{ margin: 5, width: '60%' }}>
-        <Button
-          title="Basic animation"
-          onPress={() => {
-            setAnimationType(5);
-            setIsModalVisible(true);
-          }}
-        />
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Basic animation"
+            onPress={() => {
+              setAnimationType(5);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
       </View>
-    </View>
-    )
-  }
-
+    );
+  };
 
   const PageOne = () => {
     return (
-    <View style={{alignItems:'center'}}>
-      <View>
-        <Image
-          source={require('./src/Assets/logo.gif')}
-          loop
-          style={{ width: 200, height: 200 }}
-        />
-      </View>
-      <Text style={{ fontSize: 20 }}>Reanimated 2</Text>
-
-    </View>
-    )
-  }
+      <>
+        <View>
+          <Image
+            source={require('./src/Assets/logo.gif')}
+            loop
+            style={{width: 200, height: 200}}
+          />
+        </View>
+        <Text style={{fontSize: 20}}>Reanimated 2</Text>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Reanimated 2 Scaling"
+            onPress={() => {
+              setAnimationType(6);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Reanimated 2 Fade out"
+            onPress={() => {
+              setAnimationType(7);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Reanimated 2 Sequence"
+            onPress={() => {
+              setAnimationType(8);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Reanimated 2 Wobble"
+            onPress={() => {
+              setAnimationType(9);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
+        <View style={{margin: 5, width: '60%'}}>
+          <Button
+            title="Reanimated 2 Shake"
+            onPress={() => {
+              setAnimationType(10);
+              setIsModalVisible(true);
+            }}
+          />
+        </View>
+      </>
+    );
+  };
 
   return (
     <View
@@ -141,11 +189,16 @@ const App = () => {
           elevation: 22,
         }}>
         {page === 0 ? <PageZero /> : <PageOne />}
-        <TouchableOpacity onPress={() => { page === 0 ? setPage(1) : setPage(0) }} style={{ position: 'absolute', bottom: 10 }}>
-        <Text>{page === 0 ? 'Next Page' : 'Previous page'}</Text>
+        <TouchableOpacity
+          onPress={() => {
+            page === 0 ? setPage(1) : setPage(0);
+          }}
+          style={{position: 'absolute', bottom: 10}}>
+          <Text>{page === 0 ? 'Next Page' : 'Previous page'}</Text>
         </TouchableOpacity>
       </View>
-      <Modal isVisible={isModalVisible}>
+
+      <Modal isVisible={isModalVisible} animationType="slide">
         <View
           style={{
             backgroundColor: 'white',
@@ -164,14 +217,24 @@ const App = () => {
             <SquareScaleWithFriction />
           ) : animationType === 4 ? (
             <SquareAnimated />
+          ) : animationType === 6 ? (
+            <ReanimatedScaling />
+          ) : animationType === 7 ? (
+            <ReanimatedFading />
+          ) : animationType === 8 ? (
+            <ReanimatedSequence />
+          ) : animationType === 9 ? (
+            <ReanimatedWobble />
+          ) : animationType === 10 ? (
+            <ReanimatedShake />
           ) : (
             <Square />
           )}
         </View>
         <Button
           title="Hide modal"
-          style={{position: 'absolute', bottom: 0}}
-          onPress={() => setIsModalVisible(!isModalVisible)}
+          style={{bottom: 0}}
+          onPress={() => setIsModalVisible(false)}
         />
       </Modal>
     </View>
