@@ -45,3 +45,6 @@ run npm run android
  [React Native Reanimated](https://github.com/software-mansion/react-native-reanimated) </br>
  [React Native SVG Animations](https://github.com/73R3WY/react-native-svg-animations) </br>
  [React Native Circular Menu](https://github.com/geremih/react-native-circular-action-menu) </br>
+ </br>
+ </br>
+ [APK Build](https://drive.google.com/file/d/1QGC5MHh6p8RJvUkWBJnjSVnlzC1aB72l/view?usp=sharing)
