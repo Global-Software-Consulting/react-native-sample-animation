@@ -160,6 +160,25 @@ const App = () => {
     );
   };
 
+
+  const PageThree = () => {
+    return (
+      <>
+        <View>
+          <Image
+            source={require('./src/Assets/logo.gif')}
+            loop
+            style={{width: 200, height: 200}}
+          />
+        </View>
+        <Text style={{fontSize: 20}}>SVG animation</Text>
+        
+
+      </>
+    );
+  };
+
+
   return (
     <View
       style={{
@@ -188,14 +207,21 @@ const App = () => {
 
           elevation: 22,
         }}>
-        {page === 0 ? <PageZero /> : <PageOne />}
-        <TouchableOpacity
+        {page === 0 ? <PageZero /> : page===2 ? <PageThree /> : <PageOne />}
+        {page != 2 && <TouchableOpacity
           onPress={() => {
-            page === 0 ? setPage(1) : setPage(0);
+            page === 2 ? setPage(2) : setPage(page + 1);
           }}
-          style={{position: 'absolute', bottom: 10}}>
-          <Text>{page === 0 ? 'Next Page' : 'Previous page'}</Text>
-        </TouchableOpacity>
+          style={{ position: 'absolute', bottom: 10, right:5 }}>
+          <Text>Next Page</Text>
+        </TouchableOpacity>}
+        {page != 0 && <TouchableOpacity
+          onPress={() => {
+            page === 0 ? setPage(0) : setPage(page - 1);
+          }}
+          style={{ position: 'absolute', bottom: 10, left:5 }}>
+          <Text>Previous Page</Text>
+        </TouchableOpacity>}
       </View>
 
       <Modal isVisible={isModalVisible} animationType="slide">
