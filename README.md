@@ -27,8 +27,6 @@
  * Circular floating button with ripple effect.
 
 ## Code Structure
-
-#### There are six major screens i.e Login, Sign up, Forgot Password, Explore, Favorites and User details.
 ##### Important Code:
 * App.js App entry point 
 * src/Assets All assets
@@ -56,8 +54,11 @@ for Android
 run npm run android
 
 ```
-*Libraries used
-** [React Native Reanimated](https://github.com/software-mansion/react-native-reanimated)
-** [React Native SVG Animations](https://github.com/73R3WY/react-native-svg-animations)
-** [React Native Circular Menu](https://github.com/geremih/react-native-circular-action-menu)
+* Libraries used
+</br>
+ [React Native Reanimated](https://github.com/software-mansion/react-native-reanimated)
+ </br>
+ [React Native SVG Animations](https://github.com/73R3WY/react-native-svg-animations)
+ </br>
+ [React Native Circular Menu](https://github.com/geremih/react-native-circular-action-menu)
 </br>
