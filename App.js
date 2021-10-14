@@ -7,7 +7,7 @@
  */
 
 import React, {useState} from 'react';
-import Modal from 'react-native-modal';
+import { Modal, Portal, Provider } from 'react-native-paper';
 import { View, Text, Image, Button, TouchableOpacity } from 'react-native';
 //importing components
 import SquareFadeIn from './src/components/SquareFadeIn/index';
@@ -194,6 +194,8 @@ const App = () => {
   };
 
   return (
+    <Provider>
+
     <View
       style={{
         backgroundColor: '#F3f2ed',
@@ -248,15 +250,15 @@ const App = () => {
             <Text style={{color:'black'}}>Previous Page</Text>
           </TouchableOpacity>
         )}
-      </View>
-
-      <Modal isVisible={isModalVisible} animationType='slide'>
+        </View>
+        <Portal>
+          <Modal visible={isModalVisible} onDismiss={() => {  setIsModalVisible(!isModalVisible) }}  >
         <View
           style={{
             backgroundColor: 'white',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '40%',
+            height: '60%',
             borderRadius: 5,
           }}>
           {animationType === 0 ? (
@@ -289,7 +291,10 @@ const App = () => {
           onPress={() => setIsModalVisible(false)}
         />
       </Modal>
-    </View>
+      </Portal>
+      </View>
+      </Provider>
+
   );
 };
 

@@ -22,7 +22,14 @@ const SquareScaleWithFriction = () => {
          easing: Easing.bounce,
         friction:1,
         useNativeDriver: true,
-      }).start();
+       }).start();
+    
+    return () => {Animated.spring(translation, {
+      toValue: 1,
+       easing: Easing.bounce,
+      friction:1,
+      useNativeDriver: true,
+     }).stop()}
   }, []);
 
   // useEffect(() => {
