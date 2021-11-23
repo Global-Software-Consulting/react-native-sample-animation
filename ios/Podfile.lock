@@ -209,6 +209,9 @@ PODS:
   - React-jsinspector (0.66.0)
   - React-logger (0.66.0):
     - glog
+  - react-native-photo-manipulator (1.2.7):
+    - React
+    - WCPhotoManipulator (~> 2.0.4)
   - React-perflogger (0.66.0)
   - React-RCTActionSheet (0.66.0):
     - React-Core/RCTActionSheetHeaders (= 0.66.0)
@@ -305,6 +308,7 @@ PODS:
     - Yoga
   - RNSVG (12.1.1):
     - React
+  - WCPhotoManipulator (2.0.4)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -327,6 +331,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-photo-manipulator (from `../node_modules/react-native-photo-manipulator`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -346,6 +351,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - fmt
+    - WCPhotoManipulator
 
 EXTERNAL SOURCES:
   boost:
@@ -382,6 +388,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-photo-manipulator:
+    :path: "../node_modules/react-native-photo-manipulator"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -432,6 +440,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 6a05173dc0142abc582bd4edd2d23146b8cc218a
   React-jsinspector: be95ad424ba9f7b817aff22732eb9b1b810a000a
   React-logger: 9a9cd87d4ea681ae929b32ef580638ff1b50fb24
+  react-native-photo-manipulator: dce015c4d602abb529931a40d9d34c277ee478b8
   React-perflogger: 1f554c2b684e2f484f9edcdfdaeedab039fbaca8
   React-RCTActionSheet: 610d5a5d71ab4808734782c8bca6a12ec3563672
   React-RCTAnimation: ec6ed97370ace32724c253f29f0586cafcab8126
@@ -446,8 +455,9 @@ SPEC CHECKSUMS:
   ReactCommon: eb059748e842a1a86025ebbd4ac9d99e74492f88
   RNReanimated: 0a220d11e97e5de1c552e943a9a3f89b06c2cbf2
   RNSVG: 551acb6562324b1d52a4e0758f7ca0ec234e278f
+  WCPhotoManipulator: 45b7be19b75c9edf6d2b44f2f61dbc3673862a8f
   Yoga: c11abbf5809216c91fcd62f5571078b83d9b6720
 
 PODFILE CHECKSUM: a6d212db3ab67cfc5b62b08b219101dc79d08760
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.11.2
